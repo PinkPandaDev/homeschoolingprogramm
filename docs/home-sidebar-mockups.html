@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homeschooling-App · Home-Ansicht & Seitenleiste · Design-Mockups</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #eef1ee;
+      color: #1f2933;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 42px;
+      background:
+        radial-gradient(circle at top left, rgba(176, 202, 184, .35), transparent 34rem),
+        linear-gradient(135deg, #f8faf8 0%, #ebefec 100%);
+    }
+
+    header {
+      max-width: 1180px;
+      margin: 0 auto 34px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      letter-spacing: -0.055em;
+      line-height: 1.02;
+    }
+
+    header p {
+      margin: 0;
+      max-width: 780px;
+      color: #667085;
+      font-size: 1.02rem;
+      line-height: 1.6;
+    }
+
+    .mockups {
+      display: grid;
+      gap: 42px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .mockup-block {
+      display: grid;
+      gap: 16px;
+    }
+
+    .mockup-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .mockup-title h2 {
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: -0.025em;
+    }
+
+    .mockup-title p {
+      margin: 0;
+      color: #667085;
+      max-width: 620px;
+      line-height: 1.5;
+      font-size: .94rem;
+    }
+
+    .app-frame {
+      min-height: 690px;
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: 0 28px 85px rgba(31, 41, 51, .16);
+      border: 1px solid rgba(255,255,255,.7);
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-radius: 16px;
+      padding: 12px 14px;
+      font-weight: 650;
+      font-size: .92rem;
+    }
+
+    .icon {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 11px;
+      font-size: .95rem;
+      flex: 0 0 auto;
+    }
+
+    .chip, .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: .78rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .progress-line {
+      height: 9px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(31, 41, 51, .08);
+    }
+
+    .progress-line > span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+    }
+
+    /* Mockup A */
+    .a {
+      display: grid;
+      grid-template-columns: 266px 1fr;
+      background: #f8faf6;
+    }
+
+    .a .sidebar {
+      padding: 26px 20px;
+      background: rgba(255,255,255,.72);
+      border-right: 1px solid #e6ebe4;
+    }
+
+    .a .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      font-weight: 820;
+      letter-spacing: -0.02em;
+    }
+
+    .a .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #7fad8b, #d6c68b);
+      color: white;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 12px 28px rgba(91, 134, 103, .26);
+    }
+
+    .a .nav-item { color: #53655a; margin-bottom: 7px; }
+    .a .nav-item.active { background: #e8f0e8; color: #285640; }
+    .a .icon { background: white; color: #6c9a78; }
+    .a .active .icon { background: #5b8667; color: white; }
+
+    .a .sidebar-card {
+      margin-top: 34px;
+      padding: 16px;
+      border-radius: 22px;
+      background: #f1e8cf;
+      color: #725b25;
+    }
+
+    .a .main {
+      padding: 34px;
+      background: linear-gradient(180deg, #fbfcf9, #f1f5ef);
+    }
+
+    .a .topbar, .b .topbar, .c .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .a .topbar h3, .b .topbar h3, .c .topbar h3 {
+      margin: 0 0 5px;
+      font-size: 2rem;
+      letter-spacing: -0.045em;
+    }
+
+    .a .topbar p, .b .topbar p, .c .topbar p { margin: 0; color: #667085; }
+
+    .a .hero {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .a .card {
+      background: rgba(255,255,255,.86);
+      border: 1px solid #e8eee7;
+      border-radius: 28px;
+      padding: 22px;
+      box-shadow: 0 12px 36px rgba(31, 41, 51, .06);
+    }
+
+    .a .student {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .a .avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #d7e8d8, #f2dfb2);
+      display: grid;
+      place-items: center;
+      font-size: 1.8rem;
+    }
+
+    .a .student h4, .b .student h4, .c .student h4 { margin: 0 0 4px; font-size: 1.4rem; }
+    .a .student p, .b .student p, .c .student p { margin: 0; color: #667085; }
+    .a .grid-2, .c .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+    .a .metric {
+      padding: 17px;
+      border-radius: 20px;
+      background: #f7f4eb;
+    }
+
+    .a .metric strong, .b .metric strong, .c .metric strong { display: block; font-size: 1.55rem; letter-spacing: -0.04em; }
+    .a .metric span, .b .metric span, .c .metric span { color: #667085; font-size: .84rem; }
+    .a .progress-line > span { background: linear-gradient(90deg, #79a983, #d6c68b); }
+    .a .topic { display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid #edf1eb; }
+    .a .topic:last-child { border-bottom: 0; padding-bottom: 0; }
+    .a .topic h5 { margin: 0 0 5px; font-size: .98rem; }
+    .a .topic p { margin: 0; color: #667085; font-size: .84rem; }
+    .a .chip { background: #eaf3eb; color: #356747; }
+
+    /* Mockup B */
+    .b {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      background: #f3ece2;
+      font-family: "Aptos", "Segoe UI", system-ui, sans-serif;
+    }
+
+    .b .rail {
+      background: #23201d;
+      padding: 22px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .b .brand-dot {
+      width: 52px;
+      height: 52px;
+      border-radius: 22px;
+      background: #f2b36d;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: #23201d;
+      margin-bottom: 18px;
+    }
+
+    .b .rail-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 21px;
+      display: grid;
+      place-items: center;
+      color: #d8cfc1;
+      font-size: 1.2rem;
+    }
+
+    .b .rail-icon.active { background: #fff7ec; color: #23201d; }
+
+    .b .main {
+      display: grid;
+      grid-template-columns: 1fr 330px;
+      gap: 26px;
+      padding: 30px;
+      background: #fbf6ee;
+    }
+
+    .b .topbar { grid-column: 1 / -1; margin-bottom: 0; }
+    .b .search { padding: 13px 16px; background: white; border-radius: 18px; color: #8a8176; min-width: 300px; box-shadow: inset 0 0 0 1px #ece1d4; }
+    .b .left { display: grid; gap: 18px; align-content: start; }
+    .b .panel, .b .metric, .b .side-panel {
+      background: #fffaf3;
+      border: 1px solid #eadfce;
+      border-radius: 30px;
+      padding: 22px;
+    }
+
+    .b .student {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 20px;
+    }
+
+    .b .student-art {
+      width: 118px;
+      height: 118px;
+      border-radius: 36px;
+      background:
+        radial-gradient(circle at 70% 28%, #40685a 0 18%, transparent 19%),
+        radial-gradient(circle at 35% 62%, #f2b36d 0 20%, transparent 21%),
+        #ece2d4;
+    }
+
+    .b .theme-row {
+      display: grid;
+      grid-template-columns: 10px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #efe4d5;
+    }
+
+    .b .theme-row:last-child { border-bottom: 0; }
+    .b .stripe { height: 48px; border-radius: 999px; background: #d97f52; }
+    .b .theme-row:nth-child(2) .stripe { background: #426e63; }
+    .b .theme-row:nth-child(3) .stripe { background: #caa24a; }
+    .b .theme-row h5 { margin: 0 0 4px; font-size: 1rem; }
+    .b .theme-row p { margin: 0; color: #82786c; font-size: .84rem; }
+    .b .pill { background: #f1e3cf; color: #72502d; }
+    .b .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .b .metric { border-radius: 24px; }
+    .b .progress-line > span { background: #d97f52; }
+    .b .side-panel { align-self: start; min-height: 468px; }
+    .b .timeline-item { padding: 15px 0; border-bottom: 1px solid #efe4d5; }
+    .b .timeline-item h5 { margin: 0 0 5px; }
+    .b .timeline-item p { margin: 0; color: #82786c; font-size: .84rem; line-height: 1.45; }
+
+    /* Mockup C */
+    .c {
+      display: grid;
+      grid-template-columns: 302px 1fr;
+      background: #eef3f7;
+      font-family: "IBM Plex Sans", Inter, system-ui, sans-serif;
+    }
+
+    .c .sidebar {
+      background: #10243e;
+      color: #d7e7f3;
+      padding: 26px 20px;
+    }
+
+    .c .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 850;
+      letter-spacing: -0.02em;
+      margin-bottom: 26px;
+    }
+
+    .c .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: #48c6a4;
+      color: #10243e;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .c .nav-section-label {
+      color: #83a0b8;
+      text-transform: uppercase;
+      letter-spacing: .11em;
+      font-size: .7rem;
+      font-weight: 800;
+      margin: 24px 12px 9px;
+    }
+
+    .c .nav-item {
+      color: #c5d7e6;
+      border-radius: 14px;
+      margin-bottom: 5px;
+    }
+
+    .c .nav-item.active { background: rgba(72, 198, 164, .15); color: #fff; box-shadow: inset 4px 0 0 #48c6a4; }
+    .c .icon { background: rgba(255,255,255,.08); color: #9fc0d8; }
+    .c .active .icon { background: #48c6a4; color: #10243e; }
+    .c .mini-profile { margin-top: 32px; padding: 16px; border-radius: 20px; background: rgba(255,255,255,.08); }
+    .c .mini-profile strong { display: block; color: white; margin-bottom: 5px; }
+    .c .mini-profile span { color: #9fb8cc; font-size: .84rem; }
+
+    .c .main { padding: 34px; background: #f6f9fb; }
+    .c .actions { display: flex; gap: 10px; }
+    .c .button { border-radius: 14px; padding: 12px 15px; font-weight: 800; background: #10243e; color: white; }
+    .c .button.secondary { background: white; color: #18314f; border: 1px solid #dfe8ef; }
+    .c .command { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 18px; }
+    .c .card { background: white; border: 1px solid #dfe8ef; border-radius: 24px; padding: 20px; box-shadow: 0 10px 28px rgba(16,36,62,.06); }
+    .c .hero { display: grid; grid-template-columns: 1fr 380px; gap: 18px; }
+    .c .student { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+    .c .avatar { width: 64px; height: 64px; border-radius: 20px; background: #e5f8f3; color: #08765f; display: grid; place-items: center; font-size: 1.6rem; }
+    .c .metric { padding: 0; }
+    .c .metric-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .c .progress-line > span { background: #48c6a4; }
+    .c .coverage-list { display: grid; gap: 13px; }
+    .c .coverage-row { display: grid; grid-template-columns: 92px 1fr 42px; align-items: center; gap: 12px; font-size: .88rem; }
+    .c .topic-card { display: flex; align-items: start; gap: 14px; padding: 15px 0; border-bottom: 1px solid #e7eef4; }
+    .c .topic-card:last-child { border-bottom: 0; }
+    .c .topic-icon { width: 40px; height: 40px; border-radius: 14px; background: #eef7ff; display: grid; place-items: center; }
+    .c .topic-card h5 { margin: 0 0 5px; }
+    .c .topic-card p { margin: 0; color: #667085; font-size: .84rem; line-height: 1.45; }
+    .c .pill { background: #e5f8f3; color: #08765f; }
+
+    @media (max-width: 960px) {
+      body { padding: 22px; }
+      .app-frame { min-height: auto; }
+      .a, .b, .c { grid-template-columns: 1fr; }
+      .a .sidebar, .c .sidebar { display: none; }
+      .b .rail { display: none; }
+      .a .hero, .b .main, .c .hero, .c .command { grid-template-columns: 1fr; }
+      .b .topbar { grid-column: auto; }
+      .b .metrics { grid-template-columns: 1fr; }
+      .mockup-title { display: block; }
+      .mockup-title p { margin-top: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Drei Design-Mockups für Home-Ansicht und Seitenleiste</h1>
+    <p>Alle Varianten erfüllen die festgelegte Richtung: moderne, klare Schrift, minimalistisch genug für ruhiges Arbeiten, aber nicht leer. Die Varianten unterscheiden sich bewusst stark in Navigation, Farbe, Flächenwirkung und Informationsarchitektur.</p>
+  </header>
+
+  <main class="mockups">
+    <section class="mockup-block">
+      <div class="mockup-title">
+        <h2>Variante A · Luftig, hell, sanft</h2>
+        <p>Eine ruhige, freundliche App mit klassischer linker Seitenleiste, warmem Off-White, Salbei-Grün und grosszügigen Karten. Diese Richtung wirkt am stärksten nach Familien-/Lernbegleitungs-App.</p>
+      </div>
+      <div class="app-frame a">
+        <aside class="sidebar">
+          <div class="brand"><div class="brand-mark">⌂</div><span>Lernpfad</span></div>
+          <div class="nav-item active"><span class="icon">🏠</span>Home</div>
+          <div class="nav-item"><span class="icon">👧</span>Kinder</div>
+          <div class="nav-item"><span class="icon">🌿</span>Jahresplanung</div>
+          <div class="nav-item"><span class="icon">📚</span>Lehrplan</div>
+          <div class="nav-item"><span class="icon">✍️</span>Dokumentation</div>
+          <div class="nav-item"><span class="icon">📄</span>Jahresberichte</div>
+          <div class="nav-item"><span class="icon">🗂️</span>Dateien</div>
+          <div class="nav-item"><span class="icon">⚙️</span>Einstellungen</div>
+          <div class="sidebar-card">
+            <strong>Nächster Schritt</strong>
+            <p style="margin:8px 0 0; line-height:1.45; font-size:.86rem;">Berichtsentwurf für 2026/2027 vorbereiten.</p>
+          </div>
+        </aside>
+        <section class="main">
+          <div class="topbar">
+            <div><h3>Guten Morgen</h3><p>Emilias Übersicht für das Schuljahr 2026/2027</p></div>
+            <span class="chip">+ Neue Beobachtung</span>
+          </div>
+          <div class="hero">
+            <article class="card">
+              <div class="student"><div class="avatar">E</div><div><h4>Emilia</h4><p>1. Klasse · Zyklus 1 · Kanton Aargau</p></div></div>
+              <div class="grid-2">
+                <div class="metric"><strong>3</strong><span>Jahresthemen geplant</span></div>
+                <div class="metric"><strong>28</strong><span>Kompetenzen verknüpft</span></div>
+                <div class="metric"><strong>12</strong><span>Dokumentationen</span></div>
+                <div class="metric"><strong>Entwurf</strong><span>Jahresbericht</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <h4 style="margin:0 0 14px;">Kompetenzabdeckung</h4>
+              <p style="margin:0 0 8px; color:#667085;">NMG</p><div class="progress-line"><span style="width:62%"></span></div>
+              <p style="margin:16px 0 8px; color:#667085;">Überfachlich</p><div class="progress-line"><span style="width:48%"></span></div>
+              <p style="margin:16px 0 8px; color:#667085;">Deutsch & Mathe</p><div class="progress-line"><span style="width:35%"></span></div>
+            </article>
+          </div>
+          <article class="card">
+            <h4 style="margin:0 0 12px;">Jahresthemen</h4>
+            <div class="topic"><div><h5>Musik und Jahresbräuche</h5><p>Lieder, Feste, Rhythmus, Traditionen</p></div><span class="chip">9 Kompetenzen</span></div>
+            <div class="topic"><div><h5>Erkunden und Ankommen</h5><p>Umzug, Umgebung, Wege, Orientierung</p></div><span class="chip">12 Kompetenzen</span></div>
+            <div class="topic"><div><h5>Pferde und Reiten</h5><p>Tierbeobachtung, Verantwortung, Bewegung</p></div><span class="chip">7 Kompetenzen</span></div>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <section class="mockup-block">
+      <div class="mockup-title">
+        <h2>Variante B · Warm, editorial, kompakt</h2>
+        <p>Eine komplett andere Richtung: nur eine schmale Icon-Leiste links, dafür eine starke Home-Fläche mit grossem Aufgaben-/Themenfokus. Wirkt moderner, magazinartiger und weniger klassisch.</p>
+      </div>
+      <div class="app-frame b">
+        <aside class="rail">
+          <div class="brand-dot">L</div>
+          <div class="rail-icon active">⌂</div>
+          <div class="rail-icon">☺</div>
+          <div class="rail-icon">◴</div>
+          <div class="rail-icon">◇</div>
+          <div class="rail-icon">✎</div>
+          <div class="rail-icon">▤</div>
+          <div class="rail-icon">⚙</div>
+        </aside>
+        <section class="main">
+          <div class="topbar"><div><h3>Home</h3><p>Heute im Blick: planen, dokumentieren, Bericht vorbereiten.</p></div><div class="search">Suchen nach Kompetenz, Thema, Notiz …</div></div>
+          <div class="left">
+            <article class="panel student"><div><span class="pill">Aktives Kind</span><h4 style="font-size:2.1rem; letter-spacing:-.055em; margin:14px 0 8px;">Emilia</h4><p>1. Klasse · Zyklus 1 · Aargau<br>Fokus: NMG-Themen und überfachliche Kompetenzen</p></div><div class="student-art"></div></article>
+            <div class="metrics">
+              <div class="metric"><strong>42%</strong><span>NMG-Abdeckung</span></div>
+              <div class="metric"><strong>18</strong><span>Nachweise</span></div>
+              <div class="metric"><strong>3</strong><span>Themen</span></div>
+            </div>
+            <article class="panel">
+              <h4 style="margin:0 0 10px;">Jahresthemen</h4>
+              <div class="theme-row"><span class="stripe"></span><div><h5>Musik und Jahresbräuche</h5><p>Jahreskreis, Singen, Rhythmus</p></div><span class="pill">aktiv</span></div>
+              <div class="theme-row"><span class="stripe"></span><div><h5>Erkunden und Ankommen</h5><p>Neue Umgebung und Orientierung</p></div><span class="pill">geplant</span></div>
+              <div class="theme-row"><span class="stripe"></span><div><h5>Pferde und Reiten</h5><p>Tier, Verantwortung, Bewegung</p></div><span class="pill">Idee</span></div>
+            </article>
+          </div>
+          <aside class="side-panel">
+            <h4 style="margin:0 0 16px;">Aktivität</h4>
+            <div class="timeline-item"><h5>Foto hinzugefügt</h5><p>Arbeitsblatt zu Jahresbräuchen wurde als Nachweis gespeichert.</p></div>
+            <div class="timeline-item"><h5>Kompetenz markiert</h5><p>NMG-Kompetenz wurde im Thema Erkunden bereits einmal verwendet.</p></div>
+            <div class="timeline-item"><h5>Bericht</h5><p>Einleitung ist vorbereitet; Themenabschnitte sind noch offen.</p></div>
+            <h4 style="margin:26px 0 12px;">Überfachlich</h4>
+            <div class="progress-line"><span style="width:55%"></span></div>
+          </aside>
+        </section>
+      </div>
+    </section>
+
+    <section class="mockup-block">
+      <div class="mockup-title">
+        <h2>Variante C · Klar, professionell, kontrastreich</h2>
+        <p>Eine sachlichere, sehr strukturierte Richtung mit dunkler Seitenleiste, klaren Datenkarten und stärkerem Dashboard-Charakter. Gut, wenn die App mehr wie ein professionelles Planungswerkzeug wirken soll.</p>
+      </div>
+      <div class="app-frame c">
+        <aside class="sidebar">
+          <div class="brand"><div class="brand-mark">LP</div><span>Lehrplan Home</span></div>
+          <div class="nav-section-label">Arbeit</div>
+          <div class="nav-item active"><span class="icon">⌂</span>Home</div>
+          <div class="nav-item"><span class="icon">◎</span>Kind-Dashboard</div>
+          <div class="nav-item"><span class="icon">◫</span>Jahresplanung</div>
+          <div class="nav-item"><span class="icon">✦</span>Dokumentation</div>
+          <div class="nav-section-label">Grundlagen</div>
+          <div class="nav-item"><span class="icon">#</span>Lehrplan</div>
+          <div class="nav-item"><span class="icon">▧</span>Berichte</div>
+          <div class="nav-item"><span class="icon">▣</span>Dateien</div>
+          <div class="nav-item"><span class="icon">⚙</span>Einstellungen</div>
+          <div class="mini-profile"><strong>Emilia</strong><span>Aktives Schuljahr 2026/2027</span></div>
+        </aside>
+        <section class="main">
+          <div class="topbar"><div><h3>Home-Dashboard</h3><p>Planung, Kompetenzstand und Bericht auf einen Blick.</p></div><div class="actions"><div class="button secondary">Lehrplan öffnen</div><div class="button">Dokumentieren</div></div></div>
+          <div class="command">
+            <article class="card metric"><div class="metric-header"><span>Geplante Kompetenzen</span><strong>28</strong></div><div class="progress-line"><span style="width:68%"></span></div></article>
+            <article class="card metric"><div class="metric-header"><span>Dokumentiert</span><strong>12</strong></div><div class="progress-line"><span style="width:42%"></span></div></article>
+            <article class="card metric"><div class="metric-header"><span>Bericht</span><strong>35%</strong></div><div class="progress-line"><span style="width:35%"></span></div></article>
+          </div>
+          <div class="hero">
+            <article class="card">
+              <div class="student"><div class="avatar">E</div><div><h4>Emilia</h4><p>Zyklus 1 · 1. Klasse · Kanton Aargau</p></div></div>
+              <h4 style="margin:0 0 16px;">Abdeckung nach Bereich</h4>
+              <div class="coverage-list">
+                <div class="coverage-row"><span>NMG</span><div class="progress-line"><span style="width:62%"></span></div><strong>62%</strong></div>
+                <div class="coverage-row"><span>Deutsch</span><div class="progress-line"><span style="width:30%"></span></div><strong>30%</strong></div>
+                <div class="coverage-row"><span>Mathe</span><div class="progress-line"><span style="width:24%"></span></div><strong>24%</strong></div>
+                <div class="coverage-row"><span>Überfachlich</span><div class="progress-line"><span style="width:55%"></span></div><strong>55%</strong></div>
+              </div>
+            </article>
+            <article class="card">
+              <h4 style="margin:0 0 16px;">Aktuelle Themen</h4>
+              <div class="topic-card"><div class="topic-icon">♫</div><div><h5>Musik und Jahresbräuche</h5><p>Aktiv · 9 Kompetenzen · 4 Nachweise</p></div></div>
+              <div class="topic-card"><div class="topic-icon">⌖</div><div><h5>Erkunden und Ankommen</h5><p>Geplant · 12 Kompetenzen · Umgebung</p></div></div>
+              <div class="topic-card"><div class="topic-icon">♞</div><div><h5>Pferde und Reiten</h5><p>Idee · NMG, Bewegung, Verantwortung</p></div></div>
+              <span class="pill">+ Thema ergänzen</span>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
